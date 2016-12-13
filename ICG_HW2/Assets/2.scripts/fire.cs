@@ -3,12 +3,15 @@ using System.Collections;
 
 public class fire : MonoBehaviour {
 
-	public Rigidbody projcetile;
+	public Rigidbody projcetile1, projcetile2;
+
+	private Rigidbody projcetile;
+
 	float speed = 30;
 
 	// Use this for initialization
 	void Start () {
-	
+		projcetile = projcetile1;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +29,9 @@ public class fire : MonoBehaviour {
 			Physics.IgnoreCollision(transform.root.GetComponent<Collider>(), shoot.GetComponent<Collider>());
 		}
 
-	
+		if (Input.GetKey (KeyCode.Z))
+			projcetile = projcetile1;
+		else if (Input.GetKey (KeyCode.X))
+			projcetile = projcetile2;
 	}
 }

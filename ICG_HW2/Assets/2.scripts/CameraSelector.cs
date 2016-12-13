@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class CameraSelector : MonoBehaviour {
-
-	private float CameraRotateSpeed = 3.0f;
+	
 	private float thirdAngle = 0.0f;
 
 	// Use this for initialization
@@ -22,18 +21,15 @@ public class CameraSelector : MonoBehaviour {
 			transform.localRotation = Quaternion.Euler(11.96f, 180.0f, 0.0f);
 		}
 		else if (Input.GetKey(KeyCode.Alpha3)) {
-			//transform.localPosition = new Vector3(0.0f, 1.15f, -2.0f);
 			UpdateAngle ();
 		}
 
 		// for third person view
 		if (Input.GetKey (KeyCode.R)) {
-//			transform.RotateAround (transform.parent.position, new Vector3 (0.0f, 1.0f, 0.0f), CameraRotateSpeed);
 			thirdAngle += 2.0f;
 			UpdateAngle ();
 		}
 		else if (Input.GetKey (KeyCode.T)) {
-//			transform.RotateAround (transform.parent.position, new Vector3 (0.0f, -1.0f, 0.0f), CameraRotateSpeed);
 			thirdAngle -= 2.0f;
 			UpdateAngle ();
 		}

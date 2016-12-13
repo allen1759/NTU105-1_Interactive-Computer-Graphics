@@ -48,11 +48,11 @@ public class enemyMove : MonoBehaviour {
 			else
 				currAngle += 180.0f;
 			
-			if (3 < Mathf.Abs (currAngle) && Mathf.Abs (currAngle) < viewAngle) {
-				if (currAngle > 0 && currAngle < 180) {
+			if (Mathf.Abs (currAngle) < viewAngle) {
+				if (currAngle > 5 && currAngle < 180) {
 					transform.Rotate (0, -rSpeed, 0);
 				} 
-				else {
+				else if(currAngle < -5 && currAngle > -180) {
 					transform.Rotate (0, rSpeed, 0);
 				}
 

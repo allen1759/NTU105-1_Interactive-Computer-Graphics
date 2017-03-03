@@ -1,13 +1,12 @@
 fileFormatVersion: 2
 guid: cb0c99aa41eeb07429faaeceb7231274
-timeCreated: 1481577209
+timeCreated: 1481600845
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - projcetile1: {fileID: 5400000, guid: 79354c1dcd614ac4a88be413e38cb9ef, type: 2}
-  - projcetile2: {fileID: 54000014146355176, guid: a384ceebed6364b3a980fbd16a81233a,
-      type: 2}
+  - projcetile2: {fileID: 5400000, guid: 61b8901bff08a415685f6cdfe3333ad4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

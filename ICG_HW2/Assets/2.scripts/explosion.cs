@@ -15,6 +15,11 @@ public class explosion : MonoBehaviour {
 		if(collision.gameObject.tag == "enemy"){//當撞到的collider具有enemy tag時
 			Instantiate (effect, transform.position, transform.rotation);
 			Destroy(gameObject);//刪除砲彈
+		}
+		if(collision.gameObject.tag == "zombie"){//當撞到的collider具有enemy tag時
+			Instantiate (effect, transform.position, transform.rotation);
+			Destroy(gameObject);//刪除砲彈
+			GameObject.Find ("zombie").GetComponent <ZombieController> ().hitTime += 1;
 		}	
 	}
 }
